@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <script src="../js/sidebar1.js" defer></script>
+
+    <script src="../js/status.js"></script>
+    <script>updateActivity()</script>
   </head>
   <body> 
     <?php

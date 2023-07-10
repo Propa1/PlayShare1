@@ -25,7 +25,7 @@
                 $status = "Offline now";
                 $sql5 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uid = {$row['uid']}");
             }
-            $offline = "Offline";
+            $offline = "offline";
         }
 
         $output .=  '<a href="../Chat/?user_id='.$row['uid'].'">
