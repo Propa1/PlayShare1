@@ -69,7 +69,7 @@ body{
     top: 52px;
     transition: 1s;
   }
-  .users-list.show{
+  .users-list.show {
     opacity: 1;
     max-height: 350px;
     overflow-y: auto;
@@ -80,7 +80,9 @@ body{
     width: 360px;
     border-radius: 0px 0px 15px 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Set a high z-index value */
   }
+  
   :is(.users-list)::-webkit-scrollbar{
     width: 0px;
   }

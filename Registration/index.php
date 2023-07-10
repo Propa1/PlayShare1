@@ -20,7 +20,7 @@
     <div class="wrapper">
       <section class="form signup">
         <header>PlayShare Registration</header>
-        <form action="../php/regist.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form action="regist.php" method="POST" enctype="multipart/form-data" autocomplete="off">
           <div class="error-text"></div>
           <div class="name-details">
             <div class="field input">
@@ -58,6 +58,6 @@
     </div>
     
     <script src="../js/hide.js"></script>
-    <script src="../js/signup.js"></script>
+    <script src="signup.js"></script>
   </body>
 </html>

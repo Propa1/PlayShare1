@@ -20,7 +20,7 @@
     <div class="wrapper">
       <section class="form login">
         <header>PlayShare Login</header>
-        <form action="../php/logins.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form action="logins.php" method="POST" enctype="multipart/form-data" autocomplete="off">
           <div class="error-text"></div>
           <div class="field input">
             <label>Email Address</label>
@@ -41,7 +41,7 @@
     </div>
     
     <script src="../js/hide.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="login.js"></script>
 
   </body>
 </html>

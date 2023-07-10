@@ -13,14 +13,15 @@
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="../js/editprofile.js"></script>
+    <script src="editprofile.js"></script>
+    
 </head>
 <body>
     <?php
         include "../php/sidebar.php";
     ?>
     <div class="wrapper">
-        <form action="../php/edit.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form action="edit.php" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="img-area">
                 <div class="inner-area">
                     <input class="" name="image" type="file" id="image-input" accept="image/*" onchange="previewImage(event)">
@@ -74,6 +75,6 @@
         
     </div>
 
-    <script src="../js/delete.js"></script>
+    <script src="delete.js"></script>
 </body>
 </html>

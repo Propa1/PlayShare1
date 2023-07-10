@@ -11,7 +11,7 @@
             <span class="username">Username</span>
         </div>
         <div class="video">
-            <video src="../media/teste.mp4" alt="Video Thumbnail" controls></video>
+            <video src="../media/Download (2).mp4" alt="Video Thumbnail" controls></video>
         </div>
         <div class="caption">Video Caption</div>
         <div class="engagement">
