@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutElement = document.querySelector('.about');
     const socialIconsElement = document.querySelector('.social-icons');
     const socialShareElement = document.querySelector('.social-share');
-    const buttons = document.querySelector('.buttons');
     const buttons2 = document.querySelector('.buttons2');
     const imgedit = document.querySelector('.custom-file-input');
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         socialShareElement.classList.toggle('hide');
         hiddens.classList.toggle('hide');
         hiddens2.classList.toggle('hide');
-        buttons.classList.toggle('hide');
         buttons2.classList.toggle('hide');
         imgedit.classList.toggle('hide');
 

@@ -45,7 +45,7 @@
               </a>
             </li>
             <li class="item">
-              <a href="#" class="link flex">
+              <a href="../MyPublications" class="link flex">
                 <i class="bx bx-grid-alt"></i>
                 <span>My Publications</span>
               </a>

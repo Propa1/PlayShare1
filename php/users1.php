@@ -2,7 +2,11 @@
     session_start();
     include_once "db_conn.php";
     $outgoing_id = $_SESSION['uid'];
-    $sql = mysqli_query($conn, "SELECT * FROM users WHERE uid != {$_SESSION['uid']}");
+    $sql = mysqli_query($conn, "SELECT u.*, uf.followed_uid 
+                            FROM users u
+                            JOIN user_followers uf ON u.uid = uf.followed_uid
+                            WHERE uf.follower_uid = {$_SESSION['uid']}");
+
     $output = "";
 
     if(mysqli_num_rows($sql) < 1){

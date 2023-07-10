@@ -48,10 +48,7 @@
                 <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
             </div>
-            <div class="buttons">
-                <button><a href="../Users" style="text-decoration:none; color:#333;">Message</a></button>
-                <button>Following</button>
-            </div>
+ 
             <div class="buttons2 hide">
                 <input type="submit" name="submit" value="Edit" class="button" id="input_edit">
                 <input type="button" class="button delete" onclick="deleteAccount()" value="Delete">
@@ -78,8 +75,5 @@
     </div>
 
     <script src="../js/delete.js"></script>
-    <script src="../js/status.js"></script>
-    <script>updateActivity()</script>
-
 </body>
 </html>

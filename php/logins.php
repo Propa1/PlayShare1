@@ -10,8 +10,8 @@
             $user_pass = md5($password);
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
-                $status = "Active now";
-                $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uid = {$row['uid']}");
+                $status = "Online now";
+                $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}', last_activity = now() WHERE uid = {$row['uid']}");
                 if($sql2){
                     $_SESSION['uid'] = $row['uid'];
                     $_SESSION['firstname'] = $row['firstname'];

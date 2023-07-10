@@ -27,7 +27,6 @@
     <div class="wrapper">
       <section class="users">
         <header>
-           
           <div class="content">
             <img src="../img/<?php echo $row['img']; ?>" alt="">
             <div class="details">
