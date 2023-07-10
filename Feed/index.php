@@ -17,10 +17,14 @@
         include "../php/sidebar.php";
     ?>
     <div class="box">
-        <input type="text" placeholder="Search.......">
-        <a href="#">
-            <i class="ri-search-line"></i>
-        </a>
+        <input class="text" type="text" placeholder="Search.......">
+        <i class="ri-search-line"></i>
+        <div class="users-list">
+            
+        </div>
     </div>
+
+    <script src="users.js"></script>
+
 </body>
 </html>

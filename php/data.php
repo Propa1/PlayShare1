@@ -17,16 +17,18 @@
         ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
 
         $currentTime = date('H:i:s', strtotime(date('H:i:s').'-2 second'.'-1 hour'));
-        
+
         ($row['last_activity']) ? $last_activity = $row['last_activity'] : $last_activity = "null";
 
         if ($last_activity < $currentTime) {
-            $status = "Offline now";
-            $sql5 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uid = {$row['uid']}");
-            $offline = "offline";
+            if ((strtotime($currentTime) - strtotime($last_activity)) > 10) {
+                $status = "Offline now";
+                $sql5 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uid = {$row['uid']}");
+            }
+            $offline = "Offline";
         }
 
-        $output .=  '<a href="../Chat?user_id='.$row['uid'].'">
+        $output .=  '<a href="../Chat/?user_id='.$row['uid'].'">
                     <div class="content">
                     <img src="../img/'. $row['img'] .'" alt="">
                     <div class="details">
@@ -37,4 +39,4 @@
                     <div class="status-dot '.$offline.'"><i class="fas fa-circle"></i></div>
                     </a>';
     }
-?>  
+?>

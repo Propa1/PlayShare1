@@ -1,28 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ecf0f3;
+  padding-top: 10px;
 }
 
 .box{
+    position: relative;
+    margin-bottom: auto;
     height: 40px;
+    justify-content: center;
     display: flex;
     cursor: pointer;
     padding: 10px 20px;
     background: #fff;
     border-radius: 30px;
     align-items: center;
+    transition: 0.8s;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.box:hover input{
-    width: 200px;
+.box:hover input {
+    width: 300px;
+    cursor: text;
+}
+
+.box input:not(:placeholder-shown) {
+    width: 300px;
+}
+
+.users-list a{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    justify-content: space-between;
+}
+:is(.users-list) .content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+:is(.users-list) .content:hover{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+}
+:is(.users-list) .content .details{
+    color: #000;
+    margin-left: 20px;
+}
+:is(.users-list) .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.users-list{
+    opacity: 0;
+    top: 52px;
+    transition: 1s;
+  }
+  .users-list.show{
+    opacity: 1;
+    max-height: 350px;
+    overflow-y: auto;
+    top: 42px;
+    justify-content: center;
+    position: absolute;
+    background-color: #fff;
+    width: 360px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  :is(.users-list)::-webkit-scrollbar{
+    width: 0px;
+  }
+  .users-list a{
+    text-decoration: none;
+  }
+  .users-list a:last-child{
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
+  .users-list a img{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+  }
+  .users-list a .details p{
+    color: #67676a;
 }
 
 .box input{
@@ -34,11 +109,8 @@ body{
     background: transparent;
 }
 
-.box a .fas{
-    color: aqua;
-    font-size: 18px;
+.box i{
+    color: #4070f4;
+    font-size: 20px;
 }
 
-a{
-    text-decoration: none;
-}

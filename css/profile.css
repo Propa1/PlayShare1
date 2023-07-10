@@ -27,6 +27,8 @@ form{
 .wrapper .img-area,
 .social-icons a,
 .buttons button,
+.buttons .follow,
+.buttons .Unfollow,
 .buttons2 .button,
 form .button_delete{
   background: #ecf0f3;
@@ -154,9 +156,11 @@ label{
 }
 .social-icons a:hover::before,
 .wrapper .icon:hover::before,
-.buttons button:hover:before,
-.buttons2 .button:hover:before,
-form .button_delete:hover:before{
+.buttons button:hover::before,
+.buttons .follow:hover::before,
+.buttons .Unfollow:hover::before,
+.buttons2 .button:hover::before,
+form .button_delete:hover::before{
   content: "";
   position: absolute;
   top: 0;
@@ -168,7 +172,19 @@ form .button_delete:hover:before{
   box-shadow: inset -3px -3px 7px #ffffff,
               inset 3px 3px 5px #ceced1;
 }
+.buttons .follow:hover{
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
+}
+.buttons .Unfollow:hover{
+  background: red;
+  color: white;
+  opacity: 0.5;
+}
 .buttons button:hover:before,
+.buttons .follow:hover:before,
+.buttons .Unfollow:hover:before,
 .buttons2 .button:hover:before,
 form .button_delete:hover:before{
   z-index: -1;
@@ -199,6 +215,8 @@ form .button_delete:hover:before{
   width: 100%;
   justify-content: space-between;
 }
+.buttons .follow,
+.buttons .Unfollow,
 .buttons button{
   position: relative;
   width: 100%;
@@ -213,11 +231,15 @@ form .button_delete:hover:before{
   z-index: 4;
 }
 .buttons button:first-child,
+.buttons .follow:first-child,
+.buttons .Unfollow:first-child,
 .buttons2 .button:first-child,
 form .button_delete:first-child{
   margin-right: 10px;
 }
 .buttons button:last-child,
+.buttons .follow:last-child,
+.buttons .Unfollow:last-child,
 .buttons2 .button:last-child{
   margin-left: 10px;
 }

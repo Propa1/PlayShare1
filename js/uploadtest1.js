@@ -2,7 +2,8 @@ const fileInput = document.getElementById('file');
 const imgArea = document.querySelector('.img-area');
 const container = document.querySelector('.container');
 
-document.querySelector('.select-image').addEventListener('click', function() {
+document.querySelector('.select-image').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent form submission
   fileInput.click();
 });
 
@@ -25,7 +26,7 @@ fileInput.addEventListener('change', function() {
       imgArea.appendChild(img);
       imgArea.classList.add('active');
     } else if (file.type.startsWith('video/')) {
-      const videoUrl = reader.result;
+      const videoUrl = URL.createObjectURL(file);
       const video = document.createElement('video');
       video.onloadedmetadata = () => {
         video.setAttribute('controls', 'true');
@@ -47,12 +48,14 @@ function resizeMedia(media) {
   const containerHeight = container.offsetHeight;
   const mediaAspectRatio = media.width / media.height;
   const containerAspectRatio = containerWidth / containerHeight;
-  if (mediaAspectRatio > containerAspectRatio) {
-    media.style.width = '100%';
-    media.style.height = 'auto';
-  } else {
+  const targetWidth = containerWidth * 0.6; // Adjust the desired width percentage here
+  const targetHeight = targetWidth / mediaAspectRatio;
+  if (targetHeight > containerHeight) {
     media.style.width = 'auto';
-    media.style.height = '100%';
+    media.style.height = containerHeight + 'px';
+  } else {
+    media.style.width = targetWidth + 'px';
+    media.style.height = 'auto';
   }
 }
 
@@ -62,7 +65,7 @@ function centerVideo() {
   video.style.top = '50%';
   video.style.left = '50%';
   video.style.transform = 'translate(-50%, -50%)';
-  imgArea.style.marginLeft = "50%";
+  imgArea.style.marginLeft = "15%";
 }
 
 function resizeImgArea() {

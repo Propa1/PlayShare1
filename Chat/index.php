@@ -29,7 +29,7 @@
       <section class="chat-area">
         <header>
           
-          <a href="../Users" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+          <a href="../users" class="back-icon"><i class="fas fa-arrow-left"></i></a>
           <img src="../img/<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span><?php echo $row['firstname'] . " " . $row['lastname']; ?></span>
