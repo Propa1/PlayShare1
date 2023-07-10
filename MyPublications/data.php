@@ -4,8 +4,7 @@
         $output .= '<div class="wrapper">
                             <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                                 <div class="user-info">
-                                    <img src="../img/' . $row['img'] . '" alt="User Profile Picture" />
-                                    <span class="username">' . $row['firstname'] . '</span>
+                                    <span class="username"></span>
                                 </div>
                                 <div class="video">';
 
@@ -21,6 +20,7 @@
 
             $output .= '</div>
                         <div class="caption">
+                            <span class="t1tle">' . $row['title'] . '</span>
                             <span class="Description">' . $row['description'] . '</span>
                             <div class="engagement">
                                 <input type="button" value="Delete" class="delete">

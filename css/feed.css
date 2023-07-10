@@ -6,6 +6,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 body{
   display: flex;
   justify-content: center;
@@ -19,13 +23,10 @@ body .output{
   position: relative;
   bottom: 20px;
   left: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.8s;
-  background: #eef5fe;
-  z-index: -99999;
 }
 
 .box {
