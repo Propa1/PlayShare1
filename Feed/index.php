@@ -23,7 +23,9 @@
             
         </div>
     </div>
-
+    <?php
+        include "../VideosOutput/index.php";
+    ?>
     <script src="users.js"></script>
 
 </body>

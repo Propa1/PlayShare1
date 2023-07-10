@@ -173,9 +173,11 @@ form .button_delete:hover::before{
               inset 3px 3px 5px #ceced1;
 }
 .buttons .follow:hover{
-  background: #ecf0f3;
+  background: green;
+  color: black;
+  opacity: 0.7;
   box-shadow: inset -3px -3px 7px #ffffff,
-              inset 3px 3px 5px #ceced1;
+              inset 3px 3px 5px #ceced1,
 }
 .buttons .Unfollow:hover{
   background: red;

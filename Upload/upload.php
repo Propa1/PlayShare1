@@ -35,7 +35,7 @@
                     $insert_query = mysqli_query($conn, "INSERT INTO publications (user_uid, title, description, media, timestamp) VALUES ('{$_SESSION['uid']}', '{$title}', '{$descriptions}', '{$new_media_name}', '{$current_time}')");
 
                     if ($insert_query) {
-                        echo "Successfully";
+                        echo "successfully";
                     } else {
                         echo "Failed to insert file.";
                     }
