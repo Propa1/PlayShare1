@@ -13,17 +13,31 @@ body{
   min-height: 100vh;
   background: #eef5fe;
 }
+body .contents{
+  margin-top: 70px;
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  background: #eef5fe;
+  z-index: -99999;
+}
 
 .contents {
-  position: absolute;
+  position: relative;
   width: 400px;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: auto;
-  gap: 50px; /* Add space between the div wrappers */
+  height: 100%;
+  gap: 50px;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .contents .wrapper {
@@ -45,7 +59,7 @@ body{
   width: 350px;
   padding: 30px;
   top: 10px;
-  border-radius: 10px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,6 +79,11 @@ body{
 }
 
 video {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+img {
   width: 350px;
   height: auto;
   border-radius: 10px;
@@ -132,4 +151,56 @@ span {
 i:hover {
   cursor: pointer;
   color: black;
+}
+
+.engagement .delete{
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  color: #31344b;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.engagement .delete{
+  background: #ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff,
+               3px 3px 5px #ceced1;
+}
+
+.engagement .delete:hover::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
+}
+
+.engagement .delete:hover{
+  background: red;
+  color: white;
+  opacity: 0.5;
+}
+
+.engagement .delete{
+  z-index: 999999999999999999999;
+  border-radius: 5px;
+}
+
+.engagement .delete:first-child{
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.engagement .delete:last-child{
+  margin-left: 10px;
 }

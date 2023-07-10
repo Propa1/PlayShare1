@@ -1,4 +1,4 @@
-const usersList = document.querySelector(".publication");
+const usersList = document.querySelector(".contents");
 
 function getPublications() {
   let xhr = new XMLHttpRequest();

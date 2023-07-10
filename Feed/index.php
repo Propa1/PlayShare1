@@ -23,9 +23,11 @@
             
         </div>
     </div>
-    <?php
-        include "../VideosOutput/index.php";
-    ?>
+    <div class="output">
+        <?php
+            include "../VideosOutput/index.php";
+        ?>
+    </div>
     <script src="users.js"></script>
 
 </body>

@@ -6,21 +6,15 @@
 <html>
 <head>
   <title>User Publications</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/videosoutput.css">
 </head>
 <body>
     <?php
         include "../php/sidebar.php";
     ?>
-  <main>
-    <section id="publications">
-      <h2>My Publications</h2>
-      <div class="publication">
-
-      </div>
-      <!-- Repeat the above div for each publication -->
-    </section>
-  </main>
+  <div class="contents">
+      
+  </div>
   <script src="Publications.js"></script>
 </body>
 </html>

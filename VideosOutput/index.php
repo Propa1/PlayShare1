@@ -7,7 +7,6 @@
 <div class="contents">
 
 </div>
-
     
     <script src="../VideosOutput/Publications.js"></script>
 

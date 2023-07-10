@@ -10,23 +10,38 @@ body{
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: #ecf0f3;
+  background: #eef5fe;
   padding-top: 10px;
 }
 
-.box{
-    position: relative;
-    margin-bottom: auto;
-    height: 40px;
-    justify-content: center;
-    display: flex;
-    cursor: pointer;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 30px;
-    align-items: center;
-    transition: 0.8s;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+body .output{
+  margin-top: 70px;
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  background: #eef5fe;
+  z-index: -99999;
+}
+
+.box {
+  position: fixed;
+  top: 10px;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 30px;
+  align-items: center;
+  transition: 0.8s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 99999;
 }
 
 .box:hover input {
