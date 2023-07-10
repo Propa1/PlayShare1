@@ -17,7 +17,7 @@ const toggleLock = () => {
   }
   // Store the lock state in localStorage
   localStorage.setItem("sidebarLock", sidebar.classList.contains("locked"));
-  document.cookie = "sidebarLock="+sidebar.classList.contains("locked");
+  document.cookie = `sidebarLock=${sidebar.classList.contains("locked")};path=/`;
 };
 
 // Function to hide the sidebar when the mouse leaves
