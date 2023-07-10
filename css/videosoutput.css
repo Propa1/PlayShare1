@@ -18,6 +18,7 @@ body{
   position: absolute;
   width: 350px;
   padding: 30px;
+  top: 10px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -43,6 +44,7 @@ body{
 .video {
   position: relative;
   width: 350px;
+  margin-top: 2px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -62,23 +64,30 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   border-radius: 10px 10px 0 0;
 }
 
 .user-info img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-right: auto;
 }
+.user-info span {
+  width: 30px;
+  height: 30px;
+  margin-right: 280px;
+}
 
 .caption {
+  height: 100px;
   position: relative;
-  top: 10px;
-  left: 25px;
   color: black;
   cursor: default;
+}
+.caption .Description{
+  position: absolute;
+  top: 10px;
 }
 
 span {
@@ -89,11 +98,10 @@ span {
 .engagement {
   position: absolute;
   display: flex;
-  right: 0;
+  right: -25px;
   align-items: center;
   bottom: 0;
   color: white;
-  border: 1px solid black;
   border-radius: 0 0 30px 0;
 }
 
