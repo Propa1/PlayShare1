@@ -47,7 +47,7 @@
                 <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="buttons">
-                <button><a href="../Chat/?user_id=<?php echo $row['uid'] ?>" style="text-decoration:none; color:#333;">Message</a></button>
+                <input type="button" name="chat" value="Message" class="follow" id="chat" onclick="location.href='../Chat/?user_id=<?php echo $row['uid'] ?>'">
                 <?php
                     $follower_uid = $_SESSION['uid'];
                     
