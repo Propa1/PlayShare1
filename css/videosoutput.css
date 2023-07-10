@@ -15,7 +15,7 @@ body{
 }
 
 .contents {
-  position: relative;
+  position: absolute;
   width: 400px;
   border-radius: 30px;
   display: flex;
@@ -71,7 +71,6 @@ video {
 }
 
 .user-info {
-  margin: 20px 0;
   position: relative;
   width: 350px;
   display: flex;

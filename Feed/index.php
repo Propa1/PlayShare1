@@ -16,18 +16,16 @@
     <?php
         include "../php/sidebar.php";
     ?>
-    <div class="feedwrapper">
-        <div class="box">
-            <input class="text" type="text" placeholder="Search.......">
-            <i class="ri-search-line"></i>
-            <div class="users-list">
-                
-            </div>
+    <div class="box">
+        <input class="text" type="text" placeholder="Search.......">
+        <i class="ri-search-line"></i>
+        <div class="users-list">
+            
         </div>
-        <?php
-        include "../VideosOutput/index.php";
-        ?>
     </div>
+    <?php
+        include "../VideosOutput/index.php";
+    ?>
     <script src="users.js"></script>
 
 </body>
