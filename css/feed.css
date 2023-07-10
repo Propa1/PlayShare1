@@ -6,17 +6,25 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.feedwrapper {
+  display: flex;
+  overflow: auto;
+  /* background-color: red; */
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
 body{
   display: flex;
   justify-content: center;
-  min-height: 100vh;
   background: #ecf0f3;
-  padding-top: 10px;
 }
 
 .box{
     position: relative;
-    margin-bottom: auto;
     height: 40px;
     justify-content: center;
     display: flex;
@@ -27,6 +35,7 @@ body{
     align-items: center;
     transition: 0.8s;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    align-self: center;
 }
 
 .box:hover input {
