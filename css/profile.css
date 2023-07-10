@@ -26,7 +26,7 @@ form{
 .wrapper,
 .wrapper .img-area,
 .social-icons a,
-.buttons button,
+.buttons .button,
 .buttons .follow,
 .buttons .Unfollow,
 .buttons2 .button,
@@ -156,7 +156,7 @@ label{
 }
 .social-icons a:hover::before,
 .wrapper .icon:hover::before,
-.buttons button:hover::before,
+.buttons .button:hover::before,
 .buttons .follow:hover::before,
 .buttons .Unfollow:hover::before,
 .buttons2 .button:hover::before,
@@ -184,7 +184,7 @@ form .button_delete:hover::before{
   color: white;
   opacity: 0.5;
 }
-.buttons button:hover:before,
+.buttons .button:hover:before,
 .buttons .follow:hover:before,
 .buttons .Unfollow:hover:before,
 .buttons2 .button:hover:before,
@@ -219,7 +219,7 @@ form .button_delete:hover:before{
 }
 .buttons .follow,
 .buttons .Unfollow,
-.buttons button{
+.buttons .button{
   position: relative;
   width: 100%;
   border: none;
@@ -232,14 +232,14 @@ form .button_delete:hover:before{
   cursor: pointer;
   z-index: 4;
 }
-.buttons button:first-child,
+.buttons .button:first-child,
 .buttons .follow:first-child,
 .buttons .Unfollow:first-child,
 .buttons2 .button:first-child,
 form .button_delete:first-child{
   margin-right: 10px;
 }
-.buttons button:last-child,
+.buttons .button:last-child,
 .buttons .follow:last-child,
 .buttons .Unfollow:last-child,
 .buttons2 .button:last-child{
