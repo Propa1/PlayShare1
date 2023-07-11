@@ -26,7 +26,7 @@
         // Return the updated likes count and message as the response
         echo json_encode(array(
             "likes" => $likesCount,
-            "message" => $actionQuery === $removeQuery ? 'Removed like' : 'Liked'
+            "insert" => ($actionQuery === $insertQuery)
         ));
     } else {
         echo 'Error handling like';
