@@ -8,7 +8,7 @@ function likePub(pub_id) {
                     break;
                 default:
                     result = JSON.parse(xhr.responseText);
-                    document.querySelector('.likes.pub'+pub_id).innerHTML = '<i class="ri-thumb-up-line like-btn" data-pub-id="' + pub_id + '"></i>' + result.likes;
+                    document.querySelector('.likes.pub'+pub_id).innerHTML = '<i class="ri-thumb-up-' + (result.insert ? 'fill' : 'line') + ' like-btn" data-pub-id="' + pub_id + '"></i>' + result.likes;
                     notyf.success(result.insert ? 'Liked' : 'Removed Like');
                     break;
             }

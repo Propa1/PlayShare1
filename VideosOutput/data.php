@@ -36,8 +36,18 @@
                                 
             $likes = mysqli_query($conn, "SELECT * FROM publications_likes WHERE publication_id = '{$pub_id}'");
             $likesCount = mysqli_num_rows($likes);
-                                
-            $output .=          '<span class="likes pub'.$pub_id.'" onclick="likePub('.$pub_id.')"><i class="ri-thumb-up-line like-btn" data-pub-id=" ' . $pub_id .'"></i>' . $likesCount . '</span>
+
+            # Check if current user liked the video
+            $liked = false;
+            if ($likesCount > 0) {
+                foreach($likes as $like) {
+                    if ($like['like_giver'] == $user_uid) {
+                        $liked = true;
+                    }
+                }
+            }
+
+            $output .=          '<span class="likes pub'.$pub_id.'" onclick="likePub('.$pub_id.')"><i class="ri-thumb-up-'.($liked ? 'fill' : 'line').' like-btn" data-pub-id=" ' . $pub_id .'"></i>' . $likesCount . '</span>
                                 <span class="comments"><i class="ri-message-2-line"></i>10</span>
                                 <span class="shares" onclick="handleLikeAndShare('.$pub_uid.')"><i class="ri-share-forward-line"></i></span>
                             </div>

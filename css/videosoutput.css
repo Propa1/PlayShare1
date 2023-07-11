@@ -160,6 +160,11 @@ i:hover {
   color: black;
 }
 
+i.ri-thumb-up-fill.like-btn {
+  color: blue;
+  transition: 0.8s;
+}
+
 .engagement .delete{
   position: relative;
   width: 100%;
