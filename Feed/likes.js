@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.likes').click(function() {
+    $('.like-btn').click(function() {
         var pub_id = $(this).data('pub-id');
 
         $.ajax({
