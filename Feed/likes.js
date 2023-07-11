@@ -9,7 +9,7 @@ function likePub(pub_id) {
                 default:
                     result = JSON.parse(xhr.responseText);
                     document.querySelector('.likes.pub'+pub_id).innerHTML = '<i class="ri-thumb-up-line like-btn" data-pub-id="' + pub_id + '"></i>' + result.likes;
-                    notyf.success(result.message);
+                    notyf.success(result.insert ? 'Liked' : 'Removed Like');
                     break;
             }
         }
