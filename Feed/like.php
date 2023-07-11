@@ -4,18 +4,11 @@
     // Get the publication ID from the AJAX request
     $pub_id = $_POST['pub_id'];
 
-    // Make sure the user is logged in
-    if (!isset($_SESSION['uid'])) {
-        exit('Unauthorized');
-    }
-
     // Check if the user has already liked the publication
     $liked = mysqli_query($conn, "SELECT * FROM publications_likes WHERE publication_id = '{$pub_id}' AND like_giver = '{$_SESSION['uid']}'");
     if (mysqli_num_rows($liked) > 0) {
-        exit();
+        echo 'exit';
     }
-
-    $publication_uid = mysqli_query($conn, "SELECT user_uid FROM publications")
 
     // Insert the like into the publications_likes table
     $insertQuery = "INSERT INTO publications_likes (like_receiver, like_giver, publication_id) VALUES ('{$publication_uid['user_uid']}', '{$_SESSION['uid']}', '{$pub_id}', )";
@@ -31,7 +24,7 @@
         // Return the updated likes count as the response
         echo $likesCount;
     } else {
-        exit('Error adding like');
+        echo 'Error adding like';
     }
 
 

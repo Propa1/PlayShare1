@@ -11,6 +11,7 @@
     <title>PlayShare</title>
     <link rel="stylesheet" href="../css/feed.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <?php
