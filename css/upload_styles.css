@@ -5,8 +5,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-::-webkit-scrollbar {
-  display: none;
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eef5fe;
+  padding-top: 10px;
 }
 
 form .error-text{
