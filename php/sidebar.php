@@ -16,8 +16,14 @@
 
     <script src="../js/status.js"></script>
     <script>updateActivity()</script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
   </head>
-  <body> 
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+      var notyf = new Notyf();
+    </script>
     <?php
       if (isset($_COOKIE["sidebarLock"]) && $_COOKIE["sidebarLock"]=="false") {
         echo '<nav class="sidebar locked close">';
