@@ -29,6 +29,6 @@
         ?>
     </div>
     <script src="users.js"></script>
-
+    <script src="likes.js"></script>
 </body>
 </html>

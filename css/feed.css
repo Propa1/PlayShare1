@@ -6,8 +6,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-::-webkit-scrollbar{
-  display: none;
+/* Track */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
 body{
@@ -46,39 +47,39 @@ body .output{
 }
 
 .box:hover input {
-    width: 300px;
-    cursor: text;
+  width: 300px;
+  cursor: text;
 }
 
 .box input:not(:placeholder-shown) {
-    width: 300px;
+  width: 300px;
 }
 
 .users-list a{
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #fff;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  justify-content: space-between;
 }
 :is(.users-list) .content{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
 :is(.users-list) .content:hover{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.8);
 }
 :is(.users-list) .content .details{
-    color: #000;
-    margin-left: 20px;
+  color: #000;
+  margin-left: 20px;
 }
 :is(.users-list) .details span{
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 .users-list{
     opacity: 0;
@@ -119,16 +120,16 @@ body .output{
 }
 
 .box input{
-    width: 0;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    transition: 0.8s;
-    background: transparent;
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
 }
 
 .box i{
-    color: #4070f4;
-    font-size: 20px;
+  color: #4070f4;
+  font-size: 20px;
 }
 

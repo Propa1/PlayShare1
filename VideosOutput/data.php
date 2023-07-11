@@ -28,8 +28,16 @@
             $output .= '</div>
                         <div class="caption">
                             <span class="Description">' . $publicationRow['description'] . '</span>
-                            <div class="engagement">
-                                <span class="likes"><i class="ri-thumb-up-line"></i>10</span>
+                            <div class="engagement">';
+                                
+            $pub_id = $publicationRow['pub_id'];
+            $pub_uid = $publicationRow['user_uid'];
+            $user_uid = $_SESSION['uid'];
+                                
+            $likes = mysqli_query($conn, "SELECT * FROM publications_likes WHERE publication_id = '{$pub_id}'");
+            $likesCount = mysqli_num_rows($likes);
+                                
+            $output .=          '<span class="likes"><i class="ri-thumb-up-line data-pub-id=" ' . $pub_id .'"></i>' . $likesCount . '</span>
                                 <span class="comments"><i class="ri-message-2-line"></i>10</span>
                                 <span class="shares"><i class="ri-share-forward-line"></i>10</span>
                             </div>
