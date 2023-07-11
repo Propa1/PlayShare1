@@ -31,5 +31,6 @@
     </div>
     <script src="users.js"></script>
     <script src="likes.js"></script>
+    <script src="share.js"></script>
 </body>
 </html>
