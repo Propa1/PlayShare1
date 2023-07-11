@@ -6,9 +6,9 @@
     <div class="chat-window">
         <ul class="message-list">
             <img src="../img/man.png" alt="">
-            <label class="UserName">name :</label>
+            <label class="UserName">Alberto :</label>
             <div class="Comentario">
-                <label class="Comentario">isto e um comentario isto e mais um comentario</label>
+                <label>isto e um comentario isto e mais um comentario </label>
             </div>
         </ul>
     </div>

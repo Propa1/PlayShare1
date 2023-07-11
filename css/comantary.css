@@ -41,16 +41,17 @@ body{
   }
 
   .chat-window::-webkit-scrollbar{
-    background: transparent;
+    display: none;
   }
 
   .message-list {
     list-style: none;
     margin: 10px;
     padding: 0;
-    background: grey;
+    background: rgba(128, 128, 128, 0.2);
     font-size: 15px;
     border-radius: 10px;
+    width: 235px;
   }
   img{
     height: 20px;
@@ -62,6 +63,8 @@ body{
   .message-list .comentario{
     position: relative;
     font-size: 15px;
+    margin-left: 40px;
+    width: 195px;
   }
   
   .chat-input {
