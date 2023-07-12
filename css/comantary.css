@@ -14,11 +14,13 @@ body{
 
 .card {
     position: absolute;
-    width: 260px;
+    width: 400px;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    bottom: 50px;
   }
   
   .chat-header {
@@ -98,4 +100,8 @@ body{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .card.hide{
+    display: none;
   }

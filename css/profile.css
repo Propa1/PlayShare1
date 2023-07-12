@@ -231,6 +231,7 @@ form .button_delete:hover:before{
   border-radius: 5px;
   cursor: pointer;
   z-index: 4;
+  transition: 0.8s;
 }
 .buttons .button:first-child,
 .buttons .follow:first-child,

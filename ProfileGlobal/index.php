@@ -62,14 +62,26 @@
             </div>
             <div class="social-share">
                 <div class="row">
-                    <i class="far fa-heart"></i>
-                    <i class="icon-2 fas fa-heart"></i>
-                    <span>5k</span>
+                    <i class="ri-user-received-line"></i>
+                    <span>
+                        <?php
+                        $likesCount = mysqli_query($conn, "SELECT follower_uid FROM user_followers WHERE follower_uid = '{$row['uid']}'");
+                        $likesCount = mysqli_num_rows($likesCount);
+
+                        echo $likesCount;
+                        ?>
+                    </span>
                 </div>
                 <div class="row">
-                    <i class="far fa-comment"></i>
-                    <i class="icon-2 fas fa-comment"></i>
-                    <span>5k</span>
+                    <i class="ri-user-shared-2-line"></i>
+                    <span>
+                        <?php
+                        $likesCount = mysqli_query($conn, "SELECT followed_uid FROM user_followers WHERE followed_uid = '{$row['uid']}'");
+                        $likesCount = mysqli_num_rows($likesCount);
+
+                            echo $likesCount;
+                        ?>
+                    </span>
                 </div>
                 <div class="row">
                     <i class="fas fa-share"></i>

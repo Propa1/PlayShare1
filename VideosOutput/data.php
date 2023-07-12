@@ -48,7 +48,7 @@
             }
 
             $output .=          '<span class="likes pub'.$pub_id.'" onclick="likePub('.$pub_id.')"><i class="ri-thumb-up-'.($liked ? 'fill' : 'line').' like-btn" data-pub-id=" ' . $pub_id .'"></i>' . $likesCount . '</span>
-                                <span class="comments"><i class="ri-message-2-line"></i>10</span>
+                                <span class="comments" onclick="handlecomments('.$pub_id.')"><i class="ri-message-2-line"></i>10</span>
                                 <span class="shares" onclick="handleLikeAndShare('.$pub_uid.')"><i class="ri-share-forward-line"></i></span>
                             </div>
                         </div>
