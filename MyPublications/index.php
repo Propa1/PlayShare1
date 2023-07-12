@@ -16,5 +16,7 @@
       
   </div>
   <script src="Publications.js"></script>
+  <script src="delete.js"></script>
+
 </body>
 </html>

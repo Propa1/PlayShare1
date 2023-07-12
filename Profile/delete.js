@@ -6,7 +6,7 @@ function confirmDelete() {
       text: 'Confirm',
       callback: deleteAccount
     }
-  })
+  });
 }
 
 function deleteAccount() {
@@ -20,11 +20,11 @@ function deleteAccount() {
         // Redirect to the login page
         Notify.success({
           description: 'Account deleted'
-        })
+        });
         window.location.href = "../Login";
       } else {
         window.location.href = "../Profile";
-      }n
+      }
     }
   };
   xhr.send();

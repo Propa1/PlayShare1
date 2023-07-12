@@ -2,7 +2,7 @@
     while($row = mysqli_fetch_assoc($sql)){
 
         $output .= '<div class="wrapper">
-                            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+                            <form action="delete.php" method="POST" enctype="multipart/form-data" autocomplete="off">
                                 <div class="user-info">
                                     <span class="username"></span>
                                 </div>
@@ -23,7 +23,7 @@
                             <span class="t1tle">' . $row['title'] . '</span>
                             <span class="Description">' . $row['description'] . '</span>
                             <div class="engagement">
-                                <input type="button" value="Delete" class="delete">
+                                
                             </div>
                         </div>
                     </form>
