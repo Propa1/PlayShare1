@@ -2,7 +2,7 @@
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 <div class="card hide">
-    <div class="chat-header">Chat<i class="ri-close-line" onclick="close()"></i></div>
+    <div class="chat-header">Chat<i class="ri-close-line" ></i></div>
     <div class="chat-window">
         
     </div>

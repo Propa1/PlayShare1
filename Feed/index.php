@@ -36,5 +36,6 @@
     <script src="users.js"></script>
     <script src="likes.js"></script>
     <script src="share.js"></script>
+    <script src="../Comentary/comments.js"></script>
 </body>
 </html>

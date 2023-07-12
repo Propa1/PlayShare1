@@ -1,3 +1,5 @@
+let globalPubId; // Declare the variable to store the pub_id value globally
+
 function handlecomments(pub_id) {
   const card = document.querySelector(".chat-window");
   const card2 = document.querySelector(".card");
@@ -21,31 +23,34 @@ function handlecomments(pub_id) {
     console.error("Request failed. Network error.");
   };
   xhr.send();
+
+  // Assign the pub_id value to the global variable
+  globalPubId = pub_id;
 }
 
 
-function close(){
-  const card2 = document.querySelector(".card");
+const sendBtn = document.querySelector(".send-button");
+const inputField = document.querySelector(".message-input");
 
-  card2.classList.toggle("hide");
-
-}
-
-const form = document.querySelector(".typing-area"),
-sendBtn = form.querySelector(".send-button"),
-inputField = form.querySelector(".chat-input");
-
-sendBtn.onclick = ()=>{
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "../Comentary/new-message.php", true);
-  xhr.onload = ()=>{
-      if(xhr.readyState === XMLHttpRequest.DONE){
-          if(xhr.status === 200){ 
-              inputField.value = "";
-              scrollToBottom();
-          }
+sendBtn.onclick = () => {
+  return () => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../Comentary/new-message.php?pub_id=" + globalPubId, true);
+    xhr.onload = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          inputField.value = "";
+        }
       }
-  }
-  let formdata = new FormData(form);
-  xhr.send(formdata);
-}
+    };
+
+    let formData = new FormData();
+    formData.append('comment', inputField.value);
+    // Add additional fields to the formData if needed
+
+    xhr.send(formData);
+  };
+};
+
+
+
