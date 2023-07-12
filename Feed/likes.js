@@ -4,12 +4,16 @@ function likePub(pub_id) {
         if(xhr.readyState === XMLHttpRequest.DONE){
             switch (xhr.responseText) {
                 case 'Error handling like':
-                    notyf.error(xhr.responseText);
+                    Notify.error({
+                        description: xhr.responseText
+                    });
                     break;
                 default:
                     result = JSON.parse(xhr.responseText);
                     document.querySelector('.likes.pub'+pub_id).innerHTML = '<i class="ri-thumb-up-' + (result.insert ? 'fill' : 'line') + ' like-btn" data-pub-id="' + pub_id + '"></i>' + result.likes;
-                    notyf.success(result.insert ? 'Liked' : 'Removed Like');
+                    Notify.success({
+                        description: result.insert ? 'Publication liked' : 'Removed like from publication'
+                    });
                     break;
             }
         }

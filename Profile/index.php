@@ -52,7 +52,7 @@
  
             <div class="buttons2 hide">
                 <input type="submit" name="submit" value="Edit" class="button" id="input_edit">
-                <input type="button" class="button delete" onclick="deleteAccount()" value="Delete">
+                <input type="button" class="button delete" onclick="confirmDelete()" value="Delete">
             </div>
             <div class="social-share">
                 <div class="row">
