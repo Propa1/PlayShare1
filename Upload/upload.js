@@ -14,7 +14,13 @@ uploadBtn.onclick = () => {
       if (xhr.status === 200) {
         let data = xhr.responseText;
         if (data.includes("successfully")) {
-          location.href = "../Upload";
+          Notify.success({
+            description: 'Video uploaded'
+          });
+
+          setTimeout(() => {
+            location.href = "../MyPublications";
+          }, 1000); // Delay of 2000 milliseconds (2 seconds)
         } else {
           errorText.textContent = data;
           errorText.style.display = "block";
@@ -25,3 +31,4 @@ uploadBtn.onclick = () => {
   let formData = new FormData(form);
   xhr.send(formData);
 };
+

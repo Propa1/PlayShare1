@@ -50,14 +50,19 @@
                 <input type="button" name="chat" value="Message" class="button" id="chat" onclick="location.href='../Chat/?user_id=<?php echo $row['uid'] ?>'">
                 <?php
                     $follower_uid = $_SESSION['uid'];
-                    
+
                     // Check if the user is already following the target user
-                    $sql2 = mysqli_query($conn, "SELECT * FROM user_followers WHERE follower_uid = '$follower_uid' AND followed_uid = '$user_id'");                    
-                    if(mysqli_num_rows($sql2) > 0) {
-                        echo '<input type="submit" name="unfollow" value="Unfollow" class="Unfollow" id="input_edit">';
-                    }else{
-                        echo '<input type="submit" name="follow" value="Follow" class="follow" id="input_edit">';
+                    $sql2 = mysqli_query($conn, "SELECT * FROM user_followers WHERE follower_uid = '$follower_uid' AND followed_uid = '$user_id'");  
+                    
+                    if ($follower_uid != $user_id) {
+                        // Only show the input field if the viewer is not the same as the session user
+                        if (mysqli_num_rows($sql2) > 0) {
+                            echo '<input type="submit" name="unfollow" value="Unfollow" class="Unfollow" id="input_edit">';
+                        } else {
+                            echo '<input type="submit" name="follow" value="Follow" class="follow" id="input_edit">';
+                        }
                     }
+                    
                 ?>
             </div>
             <div class="social-share">
@@ -65,7 +70,7 @@
                     <i class="ri-user-received-line"></i>
                     <span>
                         <?php
-                        $likesCount = mysqli_query($conn, "SELECT follower_uid FROM user_followers WHERE follower_uid = '{$row['uid']}'");
+                        $likesCount = mysqli_query($conn, "SELECT followed_uid FROM user_followers WHERE followed_uid = '{$row['uid']}'");
                         $likesCount = mysqli_num_rows($likesCount);
 
                         echo $likesCount;
@@ -76,7 +81,7 @@
                     <i class="ri-user-shared-2-line"></i>
                     <span>
                         <?php
-                        $likesCount = mysqli_query($conn, "SELECT followed_uid FROM user_followers WHERE followed_uid = '{$row['uid']}'");
+                        $likesCount = mysqli_query($conn, "SELECT follower_uid FROM user_followers WHERE follower_uid = '{$row['uid']}'");
                         $likesCount = mysqli_num_rows($likesCount);
 
                             echo $likesCount;
@@ -84,8 +89,7 @@
                     </span>
                 </div>
                 <div class="row">
-                    <i class="fas fa-share"></i>
-                    <span>5k</span>
+                    <i class="fas fa-share" onclick="handleShare('<?php echo $user_id ?>')"></i>
                 </div>
             </div>
             
@@ -93,5 +97,7 @@
         
     </div>
 
+
+    <script src="share.js"></script>
 </body>
 </html>

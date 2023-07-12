@@ -86,21 +86,9 @@
 
           <ul class="menu_item">
             <div class="menu_title flex">
-              <span class="title">Setting</span>
+              <span class="title">Logout</span>
               <span class="line"></span>
             </div>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-flag"></i>
-                <span>Contact Suport</span>
-              </a>
-            </li>
-            <li class="item">
-                <a href="#" class="link flex">
-                  <i class="bx bx-cog"></i>
-                  <span>Settings</span>
-                </a>
-              </li>
             <li class="item">
               <a href="../php/logout.php?logout_id=<?php echo $row['uid']; ?>" class="link flex">
                 <i class="ri-logout-box-r-line"></i>

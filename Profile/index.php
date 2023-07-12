@@ -60,7 +60,7 @@
                     <i class="ri-user-received-line"></i>
                     <span>
                         <?php
-                        $likesCount = mysqli_query($conn, "SELECT follower_uid FROM user_followers WHERE follower_uid = '{$_SESSION['uid']}'");
+                        $likesCount = mysqli_query($conn, "SELECT followed_uid FROM user_followers WHERE followed_uid = '{$_SESSION['uid']}'");
                         $likesCount = mysqli_num_rows($likesCount);
 
                         echo $likesCount;
@@ -71,7 +71,7 @@
                     <i class="ri-user-shared-2-line"></i>
                     <span>
                         <?php
-                        $likesCount = mysqli_query($conn, "SELECT followed_uid FROM user_followers WHERE followed_uid = '{$_SESSION['uid']}'");
+                        $likesCount = mysqli_query($conn, "SELECT follower_uid FROM user_followers WHERE follower_uid = '{$_SESSION['uid']}'");
                         $likesCount = mysqli_num_rows($likesCount);
 
                             echo $likesCount;
@@ -79,14 +79,14 @@
                     </span>
                 </div>
                 <div class="row">
-                    <i class="fas fa-share"></i>
-                    <span>5k</span>
+                    <i class="fas fa-share" onclick="handleShare('<?php echo $_SESSION['uid'] ?>')"></i>
                 </div>
             </div>
             
         </form>
         
     </div>
+    <script src="share.js"></script>
 
     <script src="delete.js"></script>
 </body>
