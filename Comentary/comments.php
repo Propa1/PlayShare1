@@ -10,7 +10,7 @@
     if (mysqli_num_rows($sql) < 1) {
         $output .= "No Publication ";
     } elseif (mysqli_num_rows($sql) >= 1) {
-        include "datacomments.php";
+        include "../comentary/datacomments.php";
     }
     echo $output;
 ?>

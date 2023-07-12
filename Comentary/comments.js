@@ -5,7 +5,7 @@ function handlecomments(pub_id) {
   card2.classList.toggle("hide");
 
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", "comments.php?pub_id=" + pub_id, true);
+  xhr.open("GET", "../comentary/comments.php?pub_id=" + pub_id, true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
@@ -29,4 +29,23 @@ function close(){
 
   card2.classList.toggle("hide");
 
+}
+
+const form = document.querySelector(".typing-area"),
+sendBtn = form.querySelector(".send-button"),
+inputField = form.querySelector(".chat-input");
+
+sendBtn.onclick = ()=>{
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../Comentary/new-message.php", true);
+  xhr.onload = ()=>{
+      if(xhr.readyState === XMLHttpRequest.DONE){
+          if(xhr.status === 200){ 
+              inputField.value = "";
+              scrollToBottom();
+          }
+      }
+  }
+  let formdata = new FormData(form);
+  xhr.send(formdata);
 }

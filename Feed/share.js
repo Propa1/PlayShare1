@@ -10,6 +10,9 @@ function handleLikeAndShare(pub_uid) {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
   
-    notyf.success("Share URL copied to clipboard");
+    Notify.success({
+        description:  'Share URL copied to clipboard'
+
+    });    
 }
   
