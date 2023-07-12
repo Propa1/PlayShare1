@@ -21,7 +21,9 @@ function deleteAccount() {
         Notify.success({
           description: 'Account deleted'
         });
-        window.location.href = "../Login";
+        setTimeout(() => {
+          location.href = "../Login";
+        }, 1000);
       } else {
         window.location.href = "../Profile";
       }

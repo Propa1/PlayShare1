@@ -18,12 +18,14 @@
                 $output .= '<video src="../media/' . urlencode($media) . '" controls></video>';
             }
 
+            $pub_id = $row['pub_id'];
+
             $output .= '</div>
                         <div class="caption">
                             <span class="t1tle">' . $row['title'] . '</span>
                             <span class="Description">' . $row['description'] . '</span>
                             <div class="engagement">
-                                
+                                <input type="button" value="Delete" onclick="confirmDelete('. $pub_id .')" class="delete">
                             </div>
                         </div>
                     </form>

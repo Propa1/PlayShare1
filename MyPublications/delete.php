@@ -21,5 +21,4 @@ if (mysqli_num_rows($checkQuery) > 0) {
     // User is not authorized to delete this publication
     echo "You are not authorized to delete this publication.";
 }
-
 ?>
