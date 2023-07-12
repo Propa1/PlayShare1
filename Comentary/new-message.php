@@ -7,7 +7,7 @@ if (isset($_SESSION['uid'])) {
     $comment = mysqli_real_escape_string($conn, $_POST['comment']);
     
     // Insert the comment into the database
-    $insertQuery = "INSERT INTO comments (pub_id, comment) VALUES ('$pub_id', '$comment')";
+    $insertQuery = "INSERT INTO comments ( pub_id, user_id, comment) VALUES ('$pub_id', '$_SESSION['uid']', '$comment')";
     if (mysqli_query($conn, $insertQuery)) {
         // Comment inserted successfully
         // You can perform any additional actions or send a success response if needed
